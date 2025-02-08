@@ -1,13 +1,15 @@
 #ifndef PWM_H
 #define PWM_H
 
+//Função que define o PWM
 void pwm_setup();
 
-#define SERVO 22
+// Definições necessárias para configurar a frequência e se o código executará no servo motor ou no pino
 
-extern uint16_t servo_level; // Declaração externa
-extern const uint16_t SERVO_STEP; // Declaração externa
-extern const uint16_t WRAP_PERIOD; // Declaração externa
-extern const float PWM_DIVISER; // Declaração externa
+#define PINO 22 // Para usar o servo motor
+//#define PINO 13 // Para usar o led
+
+#define WRAP_PERIOD 19999 // Para 50 Hz
+#define PWM_DIVISER 125.0    // Divisor ajustado
 
 #endif
