@@ -1,14 +1,16 @@
 # Projeto: Controle de Servomotor por PWM
 
 ## Descrição
-Este projeto utiliza a placa Raspberry Pi Pico W para demonstrar o controle de um servomotor por meio de PWM (Modulação por Largura de Pulso). A simulação foi conduzida utilizando o simulador online Wokwi, e o controle de LED na placa BitDogLab
+Este projeto utiliza a placa Raspberry Pi Pico W para demonstrar o controle de um servomotor por meio de PWM (Modulação por Largura de Pulso). A simulação foi conduzida utilizando o simulador online Wokwi, e o controle de LED na placa BitDogLab.
+
+OBS: Antes de iniciar o projeto, verifique na pasta include e no cabeçalho pwm.h qual valor está definido para o PINO, sendo 22 para funcionar o servomotor e 13 para o LED (vermelho)
 
 ---
 
 ## Funcionalidades
 
 ### Configuração do PWM
-- Definição da frequência de PWM para aproximadamente **50Hz** (período de 20ms) na GPIO 22.
+- Definição da frequência de PWM para aproximadamente **50Hz** (período de 20ms).
 
 ### Controle do Servo
 - **180 graus:** Ciclo ativo de **2.400µs** (0,12%).
