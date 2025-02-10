@@ -16,6 +16,14 @@ int calcular_duty_cycle(int microsegundos)
     return (microsegundos * WRAP_PERIOD) / 20000;
 }
 
+// Função que atribui o ciclo ativo ao pino com os intervalos estabelecidos
+void controle(int duty_cycle, int delay_ms)
+{
+    uint slice = pwm_gpio_to_slice_num(PINO);
+    pwm_set_gpio_level(PINO, duty_cycle);
+    sleep_ms(delay_ms);
+}
+
 // Função para atribuir o valor correto de cada ciclo ativo e definir as posições
 void ciclos()
 {
@@ -55,14 +63,6 @@ void ciclos()
         printf("Configurando intensidade baixa com ciclo de 500\n");
         controle(duty_cycle_500, 5000);
     }
-}
-
-// Função que atribui o ciclo ativo ao pino com os intervalos estabelecidos
-void controle(int duty_cycle, int delay_ms)
-{
-    uint slice = pwm_gpio_to_slice_num(PINO);
-    pwm_set_gpio_level(PINO, duty_cycle);
-    sleep_ms(delay_ms);
 }
 
 // Função que controla a movimentação suave entre 0 e 180 graus
