@@ -19,7 +19,7 @@ int calcular_duty_cycle(int microsegundos)
 // Função que atribui o ciclo ativo ao pino com os intervalos estabelecidos
 void controle(int duty_cycle, int delay_ms)
 {
-    uint slice = pwm_gpio_to_slice_num(PINO);
+    //uint slice = pwm_gpio_to_slice_num(PINO);
     pwm_set_gpio_level(PINO, duty_cycle);
     sleep_ms(delay_ms);
 }
@@ -48,8 +48,8 @@ void ciclos()
         controle(duty_cycle_500, 5000);
     }
 
-    // Vai exibir na tela no monitor mensagens associadas à intensidade do LED vermelho
-    else if (PINO == 13)
+    // Vai exibir na tela no monitor mensagens associadas à intensidade do LED azul
+    else if (PINO == 12)
     {
         // Intensidade alta devido ao ciclo maior (~2400 us)
         printf("Configurando intensidade alta com ciclo de 2400\n");
@@ -65,7 +65,7 @@ void ciclos()
     }
 }
 
-// Função que controla a movimentação suave entre 0 e 180 graus
+// Função que controla a movimentação suave entre 0 e 180 graus e da intensidade do led
 void movimento()
 {
     if (PINO == 22)
@@ -91,7 +91,7 @@ void movimento()
             }
         }
     }
-    else if (PINO == 13)
+    else if (PINO == 12)
     {
         // Incremento suave do duty cycle (~5us)
         for (int duty = duty_cycle_500; duty <= duty_cycle_2400; duty += (5 * WRAP_PERIOD) / 20000)

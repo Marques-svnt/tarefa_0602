@@ -20,7 +20,7 @@ Este projeto utiliza a placa Raspberry Pi Pico W para demonstrar o controle de u
 - Movimentação suave entre os ângulos de **0 e 180 graus**, com incremento de ciclo ativo de **±5µs** e atraso de ajuste de **10ms**.
 
 ### Experimento com LED RGB
-- **Iluminação Dinâmica:** Utilização do LED RGB conectado à GPIO 13.
+- **Iluminação Dinâmica:** Utilização do LED RGB conectado à GPIO 12.
 - Observação do comportamento dinâmico durante a execução do código:
   Resultado: Foi possível observar que os mesmos parâmetros de ciclos ativos usados para o controle do servo motor poderam ser aplicados no led, onde tivemos a configuração de três intensidades e logo após os intervalos tivemos uma oscilação bem suave da intensidade luminosa do led
 
@@ -44,7 +44,7 @@ Este projeto utiliza a placa Raspberry Pi Pico W para demonstrar o controle de u
 | Componente    | GPIO |
 |---------------|------|
 | Servomotor    | GPIO 22 |
-| LED RGB       | GPIO 13 |
+| LED RGB       | GPIO 12 |
 
 ---
 
