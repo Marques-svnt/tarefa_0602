@@ -22,7 +22,7 @@ OBS: Antes de iniciar o projeto, verifique na pasta include e no cabeçalho pwm.
 - Movimentação suave entre os ângulos de **0 e 180 graus**, com incremento de ciclo ativo de **±5µs** e atraso de ajuste de **10ms**.
 
 ### Experimento com LED RGB
-- **Iluminação Dinâmica:** Utilização do LED RGB conectado à GPIO 13.
+- **Iluminação Dinâmica:** Utilização do LED RGB conectado à GPIO 12.
 - Observação do comportamento dinâmico durante a execução do código:
   Resultado: Foi possível observar que os mesmos parâmetros de ciclos ativos usados para o controle do servo motor poderam ser aplicados no led, onde tivemos a configuração de três intensidades e logo após os intervalos tivemos uma oscilação bem suave da intensidade luminosa do led
 
@@ -46,7 +46,7 @@ OBS: Antes de iniciar o projeto, verifique na pasta include e no cabeçalho pwm.
 | Componente    | GPIO |
 |---------------|------|
 | Servomotor    | GPIO 22 |
-| LED RGB       | GPIO 13 |
+| LED RGB       | GPIO 12 |
 
 ---
 
@@ -73,7 +73,7 @@ Para testar o programa sem hardware físico, você pode utilizar o **Wokwi** par
 
 ## Demonstração no YouTube
 
-Confira a demonstração completa deste projeto no YouTube: [Demonstração do Projeto](https://www.youtube.com/watch?v=xKUtdBYOB70)
+Confira a demonstração completa deste projeto no YouTube: [Demonstração do Projeto](https://www.youtube.com/watch?v=sBOSv5qsAYQ)
 
 ---
 
